@@ -1,13 +1,33 @@
+@import '../variables/Variables.sass'
+
 .navbar-wrapper
     display: flex
     height: 4em
-    width: calc(100% - 200px)
+    width: calc(80% - 200px)
+    justify-content: space-between
+    align-items: center
     position: fixed
     left: 50%
     bottom: 5%
     transform: translateX(-50%)
-    backdrop-filter: blur(25px)
     z-index: 99
-    border-radius: 1rem
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08)
-    background-color: rgba(26,26,26,.8)
+    padding: 0 2rem
+    border-radius: 1.2rem
+    backdrop-filter: blur(25px)
+    // box-shadow: 0 6px 20px $darkShadow
+    // background-color: rgba(26,26,26,.8)
+    background: linear-gradient(270deg, #f2bbbf, #f21616)
+
+    animation: moving-gradient 15s ease infinite
+
+    .logo
+        display: flex
+        height: 2.5rem
+
+@keyframes moving-gradient
+    0%
+        background-position: 0% 50%
+    50%
+        background-position: 100% 50%
+    100%
+        background-position: 0% 50%
